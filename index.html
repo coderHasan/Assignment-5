@@ -8,7 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
-
+    <!-- My Css Link -->
+     <link rel="stylesheet" href="./styles/style.css">
     <!-- **Tailwind Config** -->
 
     <script>
@@ -17,7 +18,8 @@
             extend: {
               colors: {
                 primary_color: "#B4F461",
-                navBg: "#F9F7F3"
+                navBg: "#F9F7F3",
+                countBg: "rgba(17, 17, 17, 0.05)"
               }
             }
           }
@@ -36,7 +38,7 @@
                         <div class="navbar-start">
                           <div class="dropdown">
                             <div>
-                                <button id="blog" class="btn bg-primary_color px-8 font-bold">Blog</button>
+                                <button id="blog" class="btn bg-primary_color px-8 font-bold hover:bg-primary_color">Blog</button>
                             </div>
                           </div>
                         </div>
@@ -48,16 +50,81 @@
     
                           <div id="myBlance" class="flex items-center gap-3 font-semibold">
                                 <img src="./assets/coin.png" alt="">
-                                <span id="count">5500</span>
+                                <span id="nav-amount">5500</span>
                                 <span>BDT</span>
                           </div>
     
                         </div>
                       </div>
                 </nav>
-    
+                <div class="banner">
+                    <div class="hero ">
+                        <div class="hero-content text-center">
+                          <div class="max-w-md flex gap-5 ">
+                            <button class="btnBg active-btn btn ">Donation</button>
+                            <button class="btnBg1 btn ">History</button>
+                          </div>
+                        </div>
+                      </div>
+                </div>
             </div>
         </div>
     </header>
+
+
+    <section class="py-10">
+        <div class="container px-5 md:px-3 mx-auto">
+            <div class="">
+                <div class="card card-side bg-base-100 shadow-xl p-5 md:p-10 border border-gray-300 flex flex-col gap-8 md:flex-row">
+                    <figure class="md:w-1/2">
+                      <img
+                        src="./assets/noakhali.png"
+                        alt="..." />
+                    </figure>
+                    <div class="card-body md:w-1/2 p-0">
+                        <div id="donate-count" class=" bg-countBg md:w-3/12 flex items-center justify-center p-2 rounded-md gap-2">
+                            <img src="./assets/coin.png" alt="">
+                            <span id="flood-amount">0</span>
+                            <span>BDT</span>
+                        </div>
+                      <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh!</h2>
+                      <p class=""> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                      <div class="w-full"><input  type="text" placeholder="Type here" class="input input-amount input-bordered w-full" /></div>
+                      <div class="card-actions w-full mt-3">
+                        <button class="btn bg-primary_color w-full font-bold donateBtn">Donate Now!</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Modal -->
+                   <!-- Open the modal using ID.showModal() method -->
+                  <div>
+                    <dialog id="modal" class="modal">
+                      <div class="modal-box flex flex-col justify-center items-center">
+                        <h3 class="text-lg font-bold">Congrats!</h3>
+                        <img
+                          src="./assets/coin.png"
+                          alt="coin"
+                          class="w-10 object-cover mt-5" />
+                        <p class="py-4 text-dark-secondary">
+                          You have donate for humankind
+                        </p>
+                        <h3 class="text-lg font-bold">Successfully</h3>
+                        <div class="modal-action">
+                          <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button id="close-modal" class="btn closeBtn">Close Confirmation</button>
+                          </form>
+                        </div>
+                      </div>
+                    </dialog>
+                  </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/util.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>
