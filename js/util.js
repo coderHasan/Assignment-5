@@ -67,7 +67,7 @@ function quataDonate(navCount, cardTitle) {
             
 
           <div class="p-5 border border-gray-300 rounded-md mb-7">
-                <p class="text-md font-bold mb-5"> ${feniFloodCount.innerText = feniNewBlance} <span class="text-3xl font-extrabold">৳</span> ${cardTitle.innerText}</p>
+                <p class="text-md font-bold mb-5"> ${quotaFloodCount.innerText = quataNewBlance} <span class="text-3xl font-extrabold">৳</span> ${cardTitle.innerText}</p>
 
                 <p>${new Date()}</p>
 
@@ -87,4 +87,10 @@ function historyButton(history, donate, historyContainer){
     history.classList.add("active-btn-bg")
     donate.classList.remove("active-btn-bg")
     historyContainer.classList.remove("hidden")
+}
+
+function donateButton(donate, history, historyContainer) {
+    donate.classList.add("active-btn-bg")
+    history.classList.remove("active-btn-bg")
+    historyContainer.classList.add("hidden")
 }

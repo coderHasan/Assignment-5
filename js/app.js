@@ -85,7 +85,15 @@ historyBtn.addEventListener("click", function() {
     for(const section of main){
             section.classList.add("hidden")
     }
+    
 
+})
+
+donateBtn.addEventListener("click", function() {
+    donateButton(donateBtn, historyBtn, historyContainer1)
+    for(const section of main){
+        section.classList.remove("hidden")
+}
 })
 
 
