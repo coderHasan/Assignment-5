@@ -6,6 +6,9 @@ const donatBtn = document.querySelector(".donateBtn")
 const modal = document.querySelector(".modal")
 const closeBtn = document.querySelector(".closeBtn")
 const cardTitle1 = document.querySelector(".title1")
+const blogBtn = document.querySelector("#blog")
+
+
 // Feni Donate
 const feniDonatBtn = document.querySelector(".feni-donate-btn")
 const historyContainer1 = document.getElementById("noakhali")
@@ -95,6 +98,11 @@ donateBtn.addEventListener("click", function() {
         section.classList.remove("hidden")
 }
 })
+
+blogBtn.addEventListener("click", function() {
+    blogButton()
+})
+
 
 
 

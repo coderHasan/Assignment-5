@@ -94,3 +94,7 @@ function donateButton(donate, history, historyContainer) {
     history.classList.remove("active-btn-bg")
     historyContainer.classList.add("hidden")
 }
+
+function blogButton() {
+    window.location = "blog.html"
+}
