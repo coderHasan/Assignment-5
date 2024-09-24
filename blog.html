@@ -3,9 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- DaisyUi & tailwind Css Cdn -->
+        <link
+        href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+        rel="stylesheet"
+        type="text/css"
+      />
+      <script src="https://cdn.tailwindcss.com"></script>
+
+
     <title>Blog</title>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary_color: "#B4F461",
+                navBg: "#F9F7F3",
+                countBg: "rgba(17, 17, 17, 0.05)",
+              },
+            },
+          },
+        };
+      </script>
+  
 </head>
 <body>
-    
+    <header class="sticky top-0 z-10">
+        <div class="bg-navBg">
+          <div class="container mx-auto px-5 md:px-3">
+            <nav class="flex items-center justify-between py-5">
+              <div class="navbar">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div>
+                      <button
+                        id="blog"
+                        class="  "
+                      >
+                        <a class="text-black font-bold btn px-8  bg-primary_color hover:bg-primary_color" href="index.html">Home</a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="navbar-center hidden md:flex gap-3">
+                  <img src="./assets/logo.png" alt="" />
+                  <h3 class="font-semibold">Donate Bangladesh</h3>
+                </div>
+                <div class="navbar-end">
+                  <div
+                    id="myBlance"
+                    class="flex items-center gap-3 font-semibold"
+                  >
+                    <img src="./assets/coin.png" alt="" />
+                    <span id="nav-amount">5500</span>
+                    <span>BDT</span>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+    <main>
+        <section class="py-14">
+            <div class="container mx-auto px-3 md:px-5">
+
+                    <div class="flex flex-col gap-5">
+                        <div class="collapse collapse-arrow bg-base-200">
+                            <input type="radio" name="my-accordion-2" checked="checked" />
+                            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                            <div class="collapse-content">
+                              <p>hello</p>
+                            </div>
+                          </div>
+        
+                          <div class="collapse collapse-arrow bg-base-200">
+                            <input type="radio" name="my-accordion-2" />
+                            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                            <div class="collapse-content">
+                              <p>hello</p>
+                            </div>
+                          </div>
+        
+                          <div class="collapse collapse-arrow bg-base-200">
+                            <input type="radio" name="my-accordion-2" />
+                            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                            <div class="collapse-content">
+                              <p>hello</p>
+                            </div>
+                          </div>
+                    </div>
+
+            </div>
+        </section>
+    </main>
 </body>
 </html>

@@ -4,9 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-.active-btn{
+.active-btn-bg{
     background-color: #B4F461;
 }
-.active-btn:hover{
+.active-btn-bg:hover{
     background-color: #B4F461;
 }
